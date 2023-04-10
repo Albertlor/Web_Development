@@ -1,0 +1,2261 @@
+:root {
+    --gradient: linear-gradient(
+        45deg,
+        violet,
+        skyblue,
+        turquoise,
+        cyan,
+        rgb(255, 72, 0),
+        orange,
+        rgb(255, 217, 0),
+        lightyellow        
+    );
+}
+
+body {
+    background:papayawhip;
+    margin: 0 auto;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+header {
+    --text: white;
+    --text-inverse: slategrey;
+    --background: transparent;
+
+    background-color: var(--background);
+    color: var(--text);
+    position: fixed;
+    z-index: 10;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    transition: 300ms ease-in-out;
+}
+
+header::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.nav-scrolled {
+    --text: slategrey;
+    --text-inverse: white;
+    --background: white;
+    box-shadow: 0 3px 1rem rgba(0, 0, 0, .1);
+}
+
+header .logo {
+    position: relative;
+    float: left;
+    height: 100px;
+    width: 180px;
+}
+
+header nav {
+    float: right;
+}
+
+header nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+header nav li {
+    display: inline-block;
+    padding-top: 30px;
+    padding-right: 50px;
+    margin-left: 10px;
+}
+
+header nav a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--text);
+    border: 1px solid transparent;
+    padding: 7px 10px;
+}
+
+header nav a.active, nav a:hover {
+    border: 1px solid slategrey;
+    transition: .5s;
+}
+
+header nav a::before {
+    content: '';
+    display: flexbox;
+    height: 2px;
+    background-color: black;
+}
+
+main .introduce1 .bulb {
+    margin: 0;
+    padding: 0;
+    height: 800px;
+    width: 200px;
+    position: relative;
+    width: 100%;
+}
+
+main .introduce1 h1 {
+    color: white;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    bottom: 250px;
+    left: 40px;
+    font-size: 60px;
+    font-family: 'Berkshire Swash', cursive;
+    letter-spacing: 2px;
+    line-height: 80px;
+    -webkit-text-stroke: 0.5px whitesmoke;
+}
+main .introduce1 h2 {
+    padding: 0;
+    margin: 0;
+    font-family: 'Berkshire Swash', cursive;
+    font-size: 50px;
+    font-weight: bold;
+    position: relative;
+    left: 100px;
+    top: 600px;
+}
+
+main .introduce2 .book {
+    margin: 0;
+    padding: 0;
+    height: 600px;
+    width: 200px;
+    position: relative;
+    width: 100%;
+}
+
+main .introduce3 .road {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    height: 600px;
+    width: 100%;   
+}
+
+.banner {
+    background: rgb(31, 18, 2);
+    border: 3px solid  rgb(218, 188, 18);
+    border-radius: 30px;
+    height: 150px;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.banner .calculator {
+    position: relative;
+    align-items: center;
+    top: -360px;
+    left: -140px;
+    z-index: 2;
+    transform: rotate(-10deg);
+}
+
+.banner h1 {
+    font-size: 50px;
+    font-weight: bold;
+    color: rgb(218, 188, 18);
+    text-align: center;
+    word-spacing: 20px;
+    -webkit-text-stroke: orange 1px;
+}
+
+.slider {
+    width: 700px;
+    height: 600px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-left: 170px;
+    margin-top: 500px;
+    
+}
+
+.slides {
+    width: 500%;
+    height: 600px;
+    display: flex;
+}
+
+.slides input {
+    display: none;
+}
+
+.slide {
+    width: 20%;
+    transition: 2s;
+}
+
+.slide img {
+    width: 700px;
+    height: 600px;
+}
+
+.navigation-manual {
+    position: absolute;
+    width: 800px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn {
+    border: 2px solid #40D3DC;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+    margin-right: 100px;
+}
+
+.manual-btn:not(:last-child) {
+    margin-right: 40px;
+}
+
+.manual-btn:hover {
+    background: #40D3DC;
+}
+
+#radio1:checked ~ .first {
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+    margin-left: -20%;
+}
+
+#radio3:checked ~ .first {
+    margin-left: -40%;
+}
+
+#radio4:checked ~ .first {
+    margin-left: -60%;
+}
+
+#radio5:checked ~ .first {
+    margin-left: -80%;
+}
+
+.navigation-auto {
+    position: absolute;
+    display: flex;
+    width: 800px;
+    justify-content: center;
+    margin-top: 460px;
+}
+
+.navigation-auto div {
+    border: 2px solid #40D3DC;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+    margin-top: 100px;
+    margin-right: 100px;
+}
+
+.navigation-auto div:not(:last-child) {
+    margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1 {
+    background: #40D3DC;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2 {
+    background: #40D3DC;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3 {
+    background: #40D3DC;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4 {
+    background: #40D3DC;
+}
+
+#radio5:checked ~ .navigation-auto .auto-btn5 {
+    background: #40D3DC;
+}
+
+.recommend .topic {
+    position:relative;
+    left: 200px;
+    background: rgb(31, 18, 2);
+    width: 520px;
+    border-radius: 10px;
+    border: 3px solid  rgb(218, 188, 18);
+}
+
+.recommend h1 {
+    color: rgb(218, 188, 18);
+    padding-left: 40px;
+    font-size: 40px;
+    font-family: 'Neuton', serif;
+    word-spacing: 10px;
+}
+
+.recommend img {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    top: 300px;
+    left: 700px;
+    height: 15%;
+    width: 15%;
+    z-index: 1;
+}
+
+.recommend .summary h2 {
+    font-weight: bold;
+}
+
+.recommend .summary {
+    padding-left: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: relative;
+    left: 200px;
+    background: white;
+    width: 650px;
+    font-size: 20px;
+    border-radius: 20px;
+    border: 5px double slategrey;
+}
+
+.recommend .click {
+    position:relative;
+    left: 200px;
+    background: #D5E5FF;
+    width: 310px;
+    font-size: 20px;
+    line-height: 50px;
+    padding-left: 10px;
+    border-radius: 10px;
+}
+
+.recommend .click a {
+    text-decoration: none;
+    color:black;
+}
+
+.recommend .click:hover {
+    transform: scale(1.1);
+    transition: .5s;
+    box-shadow: slategray;
+}
+
+.slider1 {
+    width: 1200px;
+    height: 600px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-left: 170px;
+    margin-top: 150px;
+}
+
+.slides1 {
+    width: 500%;
+    height: 600px;
+    display: flex;
+}
+
+.slides1 input {
+    display: none;
+}
+
+.slide1 {
+    width: 20%;
+    transition: 2s;
+}
+
+.slide1 table {
+    width: 1200px;
+    height: 600px;
+    background: white;
+}
+
+.pg1 .left {
+    position: relative;
+    bottom: 80px;
+    right: 50px;
+    text-align: center;
+}
+
+.pg1 .right {
+    position: relative;
+    top: 50px;
+}
+
+.pg1 .line {
+    border-left: 2px solid black;
+    height: 480px;
+    position: relative;
+    bottom: 70px;
+    right: 80px;
+}
+
+.pg1 .einstein {
+    width: 300px;
+}
+
+.pg1 .shocked {
+    padding:0;
+    margin:0;
+    width: 200px;
+    position: relative;
+    bottom: 400px;
+    left: 250px;
+}
+
+.pg2 .left {
+    padding-left: 40px;
+    text-align: center;
+}
+
+.pg2 .right {
+    position: relative;
+    left: 50px;
+}
+
+.pg2 .line {
+    border-left: 2px solid black;
+    height: 480px;
+    position: relative;
+    bottom: 0;
+    right: 0;
+}
+
+.pg2 .newton {
+    width: 300px;
+}
+
+.pg3 .left {
+    text-align: center;
+    position: relative;
+    bottom: 80px;
+    right: 100px;
+}
+
+.pg3 .demo {
+    background: #D5E5FF;
+    border: 6px double #84b0f7;
+    border-radius: 10px;
+    width: 250px;
+    height: 450px;
+    position: relative;
+    top: 50px;
+    right: 280px;
+}
+
+.pg3 .ray {
+    position: relative;
+    left: 90px;
+}
+
+.pg3 .electric {
+    position: relative;
+    left: 80px;
+    bottom: 50px;
+}
+
+.pg3 .rayline {
+    width: 200px;
+    position: relative;
+    bottom: 20px;
+    left: 30px;
+}
+
+.pg3 .electricline {
+    position: relative;
+    left: 30px;
+    bottom: 60px;
+    width: 200px;
+    transform: rotate(-5deg)
+}
+
+.pg3 .line {
+    border-left: 2px solid black;
+    height: 480px;
+    position: relative;
+    bottom: 50px;
+    right: 225px;
+    padding-left: 100px;
+}
+
+.pg3 .prism {
+    position: relative;
+    top: 120px;
+    right: 200px;
+    width: 400px;
+}
+
+.pg3 .electricfield {
+    width: 400px;
+    position: relative;
+    bottom: 20px;
+    left: 200px;
+}
+
+.pg3 .wow {
+    width: 250px;
+    position: relative;
+    left: 10px;
+    bottom: 400px;
+}
+
+.pg4 .left {
+    text-align: center;
+    padding-left: 80px;
+    padding-right: 50px;
+}
+
+.pg4 .line {
+    border-left: 2px solid black;
+    height: 480px;
+    position: relative;
+    right: 10px;
+}
+
+.pg4 .right {
+    position: relative;
+    left: 30px;
+}
+
+.pg4 .force {
+    width: 500px;
+}
+
+.pg4 .circular {
+    width: 300px;
+}
+
+.pg5 .left {
+    text-align: center;
+    position: relative;
+    bottom: 50px;
+    padding-left: 80px;
+    padding-right: 50px;
+}
+
+.pg5 .line {
+    border-left: 2px solid black;
+    height: 480px;
+    position: relative;
+    left: 20px;
+}
+
+.pg5 .right {
+    position: relative;
+    bottom: 20px;
+    left: 60px;
+}
+
+.pg5 .airplane {
+    width: 300px;
+    position: relative;
+    top: 60px;
+}
+
+.pg5 .ottocycle {
+    width: 300px;
+    position: relative;
+    top: 30px;
+}
+
+.navigation-manual1 {
+    position: absolute;
+    width: 800px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn1 {
+    border: 2px solid #40D3DC;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+    margin-right: -400px;
+}
+
+.manual-btn1:not(:last-child) {
+    margin-right: 40px;
+}
+
+.manual-btn1:hover {
+    background: #40D3DC;
+}
+
+#radio6:checked ~ .first1 {
+    margin-left: 0;
+}
+
+#radio7:checked ~ .first1 {
+    margin-left: -20%;
+}
+
+#radio8:checked ~ .first1 {
+    margin-left: -40%;
+}
+
+#radio9:checked ~ .first1 {
+    margin-left: -60%;
+}
+
+#radio10:checked ~ .first1 {
+    margin-left: -80%;
+}
+
+.navigation-auto1 {
+    position: absolute;
+    display: flex;
+    width: 800px;
+    justify-content: center;
+    margin-top: 460px;
+}
+
+.navigation-auto1 div {
+    border: 2px solid #40D3DC;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+    margin-top: 100px;
+    margin-right: -400px;
+}
+
+.navigation-auto1 div:not(:last-child) {
+    margin-right: 40px;
+}
+
+#radio6:checked ~ .navigation-auto1 .auto-btn6 {
+    background: #40D3DC;
+}
+
+#radio7:checked ~ .navigation-auto1 .auto-btn7 {
+    background: #40D3DC;
+}
+
+#radio8:checked ~ .navigation-auto1 .auto-btn8 {
+    background: #40D3DC;
+}
+
+#radio9:checked ~ .navigation-auto1 .auto-btn9 {
+    background: #40D3DC;
+}
+
+#radio10:checked ~ .navigation-auto1 .auto-btn10 {
+    background: #40D3DC;
+}
+
+.remind {
+    text-align: center;
+    color: gray;
+    font-size: 18px;
+}
+
+/*courses*/
+
+main .course .general {
+    font-family: 'Ma Shan Zheng', cursive;
+    font-size: 35px;
+    height: 50px;
+    width: 150px;
+    position: relative;
+    top: 120px;
+    left: 80px;
+    margin: 0;
+    padding-top: 10px;
+    padding-left: 15px;
+    background-image: var(--gradient);
+    background-size: 300%;
+    background-position: left;
+    border-radius: 40px;
+}
+
+main .course .general:hover {
+    background-position: right;
+}
+
+main .physics {
+    position: relative;
+    left: 80px;
+    top: 130px;
+}
+
+main .physics img {
+    display: inline-block;
+    margin: 30px;
+    transition: 0.5s;
+    border-radius: 10px;
+}
+
+main .physics img:hover {
+    transform: scale(1.1);
+}
+
+main .chemistry {
+    position: relative;
+    left: 80px;
+    top: 150px;
+}
+
+main .chemistry img {
+    display: inline-block;
+    margin: 30px;
+    transition: 0.5s;
+    border-radius: 10px;
+}
+
+main .chemistry img:hover {
+    transform: scale(1.1);
+}
+
+main .math {
+    position: relative;
+    left: 80px;
+    top: 180px;
+}
+
+main .math img {
+    display: inline-block;
+    margin: 30px;
+    transition: 0.5s;
+    border-radius: 10px;
+}
+
+main .math img:hover {
+    transform: scale(1.1);
+}
+
+main .course .special {
+    font-family: 'Ma Shan Zheng', cursive;
+    font-size: 35px;
+    height: 50px;
+    width: 180px;
+    position: relative;
+    top: 250px;
+    left: 80px;
+    margin: 0;
+    padding-top: 10px;
+    padding-left: 15px;
+    background-image: var(--gradient);
+    background-size: 300%;
+    background-position: left;
+    border-radius: 40px;
+}
+
+main .course .special:hover {
+    background-position: right;
+}
+
+main .uecphysics {
+    position: relative;
+    left: 80px;
+    top: 260px;
+}
+
+main .uecphysics img {
+    display: inline-block;
+    margin: 30px;
+    transition: 0.5s;
+    border-radius: 10px;
+}
+
+main .uecphysics img:hover {
+    transform: scale(1.1);
+}
+
+/*aboutus*/
+
+main .about1 {
+    position: relative;
+    top: 100px;
+    left: 100px;
+    margin: 0;
+    padding: 0;
+    font-family: 'Berkshire Swash', cursive;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+main .about2 {
+    position: relative;
+    top: 130px;
+    left: 120px;
+    margin: 0;
+    padding-top: 1px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    width: 900px;
+    height: 400px;
+    font-family: 'Ma Shan Zheng', cursive;
+    line-height: 50px;
+    font-size: 25px;
+    background-image: var(--gradient);
+    background-size: 300%;
+    background-position: left;
+    border-radius: 60px;
+}
+
+main .about2:hover {
+    background-position: right;
+}
+
+main .frame1 {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    top: 200px;
+    left: 130px;
+    padding-left: 320px;
+    padding-right: 40px;
+    padding-top: 10px;
+    padding-bottom: 80px;
+    background-image: url(22.jpg);
+    transform: scaleX(-1);
+    background-size: 100%;
+    background-position:center;
+    margin: 80px ;
+}
+
+main .frame1 .resume1 {
+    position: relative;
+    left: 150px;
+    line-height: 25px;
+    width: 360px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    font-weight: bold;
+    z-index: 10;
+    -webkit-text-stroke: 0.2px white;
+}
+
+main .shadow-top1 {
+    position: absolute;
+    left: -50px;
+    width: 0;
+    height: 0;
+    border-bottom: 560px solid #bbb;
+    border-left: 50px solid transparent;
+}
+
+main .shadow-bottom1 {
+    position: absolute;
+    left: -50px;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-top: 20px solid #aaa;
+    border-left: 50px solid transparent;
+}
+
+main .poster1 {
+    transform: scaleX(-1);
+    position: relative;
+    bottom: 450px;
+    right: 400px;
+    height: 400px;
+    width: 700px;
+    padding: 0;
+    margin: 0;
+    z-index: 0;
+}
+
+main .frame1 {
+    animation-name: floating;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes floating {
+    from {transform: translate(0, 0px);}
+    65% {transform: translate(0, 15px);}
+    to {transform: translate(0, 0px);}
+}
+
+main .frame2 {
+    position: relative;
+    width: 450px;
+    height: 500px;
+    top: 280px;
+    left: 430px;
+    padding-left: 320px;
+    padding-right: 0;
+    padding-top: 10px;
+    padding-bottom: 80px;
+    background-image: url(22.jpg);
+    background-size: 100%;
+    background-position: center;
+    margin: 80px;
+}
+
+main .frame2 .resume2 {
+    position: relative;
+    top: 0px;
+    right: 280px;
+    line-height: 25px;
+    width: 360px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    font-weight: bold;
+    z-index: 10;
+    -webkit-text-stroke: 0.2px white;
+}
+
+main .shadow-top2 {
+    position: absolute;
+    right: -50px;
+    width: 0;
+    height: 0;
+    border-bottom: 560px solid #bbb;
+    border-right: 50px solid transparent;
+}
+
+main .shadow-bottom2 {
+    position: absolute;
+    right: -50px;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-top: 20px solid #aaa;
+    border-right: 50px solid transparent;
+}
+
+main .poster2 {
+    position: relative;
+    bottom: 550px;
+    height: 100%;
+    width: 450px;
+    padding: 0;
+    margin: 0;
+    z-index: 10;
+    transition: .1s ease-in-out;
+}
+
+main .poster2:hover {
+    opacity: 0;
+}
+
+main .poster3 {
+    position: relative;
+    bottom: 1053px;
+    width: 450px;
+    height: 100%;
+    z-index: 9;
+}
+
+main .frame2 {
+    animation-name: floating;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes floating {
+    from {transform: translate(0, 0px);}
+    65% {transform: translate(0, 15px);}
+    to {transform: translate(0, 0px);}
+}
+
+footer {
+    position: relative;
+    top: -300px;
+    left: 80px;
+    width: 90%;
+    height: 100px;
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 60px;
+    font-weight: bold;
+    font-size: 15px;
+    border-top: 1px solid;
+    display: inline-block;
+}
+
+#contact h4 {
+    position: relative;
+    top: 60px;
+    padding-bottom: 30px;
+    text-align: center;
+    color: slategrey;
+    font-size: 16px;
+}
+
+#contact .facebook {
+    position: relative;
+    top: 20px;
+    height: 50px;
+    width: 50px;
+    z-index: 10;
+}
+
+#contact h2, .facebook {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+#contact .instagram {
+    position: relative;
+    top: 20px;
+    height: 50px;
+    width: 50px;
+    z-index: 10;
+}
+
+#contact h2, .instagram {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+main .quote1 img {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: 810px;
+    width: 100%;
+    height: 800px;
+    z-index: 0;
+}
+
+main .quote1 h2 {
+    margin: 0;
+    padding-left: 150px;
+    position: relative;
+    top: 900px;
+    z-index: 9;
+    font-family: 'Ma Shan Zheng', cursive;
+    font-size: 70px;
+    font-weight: bold;
+}
+
+main .quote2 img {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: 810px;
+    width: 1600px;
+    height: 700px;
+    z-index: 2;
+}
+
+main .quote2 h2 {
+    margin: 0;
+    padding-left: 150px;
+    position: relative;
+    top: 1200px;
+    z-index: 9;
+    font-family: 'Ma Shan Zheng', cursive;
+    font-size: 80px;
+    font-weight: bold;
+}
+
+/***phone device***/
+
+@media screen and (min-width: 320px) {
+    body {
+        height: 50%;
+        width: 100%;
+    }
+
+    main .introduce1 .bulb {
+        width: 1200px;
+    }
+
+    main .introduce2 .book {
+        width: 1400px;
+    }
+
+    main .introduce1 h2 {
+        font-size: 80px;
+    }
+
+    header .logo {
+        width: 150px;
+        height: 100px;
+    }
+
+    nav li a {
+        font-size: 30px;
+    }
+
+    .banner {
+        width: 1250px;
+        height: 150px;
+        z-index: 1;
+        position: relative;
+        left: 150px;
+    }
+
+    .banner .calculator {
+        z-index: 2;
+        position: relative;
+        left: -100px;
+        top: -300px;
+        width: 300px;
+        height: 300px;
+    }
+
+    .banner h1 {
+        font-size: 55px;
+        position: relative;
+        left:30px;
+        z-index: 3;
+    }
+
+    .slider {
+        width: 1000px;
+        height: 900px;
+        border-radius: 10px;
+        overflow: hidden;
+        margin-left: 170px;
+        margin-top: 500px;
+        
+    }
+    
+    .slides {
+        width: 500%;
+        height: 900px;
+        display: flex;
+    }
+
+    .slide img {
+        width: 1000px;
+        height: 900px;
+    }
+    
+    .manual-btn {
+        border: 2px solid #40D3DC;
+        padding: 5px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 1s;
+        margin-right: -250px;
+    }
+
+    .navigation-auto div {
+        border: 2px solid #40D3DC;
+        padding: 5px;
+        border-radius: 10px;
+        transition: 1s;
+        margin-top: 400px;
+        margin-right: -250px;
+    }
+
+    .recommend .topic {
+        width: 780px;
+    }
+    
+    .recommend h1 {
+        font-size: 65px;
+    }
+    
+    .recommend img {
+        position: relative;
+        top: 450px;
+        left: 900px;
+        height: 30%;
+        width: 30%;
+    }
+    
+    .recommend .summary h2 {
+        font-weight: bold;
+        font-size: 45px;
+    }
+
+    .recommend .summary h3 {
+        font-size: 32px;
+    }
+
+    .recommend .summary h4 {
+        font-size: 27px;
+    }
+    
+    .recommend .summary {
+        position: relative;
+        left: 200px;
+        width: 1000px;
+    }
+    
+    .recommend .click {
+        position:relative;
+        left: 200px;
+        width: 550px;
+        font-size: 30px;
+        line-height: 50px;
+    }
+
+    .pg1 .left h1 {
+        font-size: 35px;
+    }
+
+    .pg1 .left h3 {
+        font-size: 25px;
+    }
+
+    .pg1 .right h3 {
+        font-size: 20px;
+    }
+
+    .pg1 .right {
+        position: relative;
+        bottom: 50px;
+    }
+
+    .pg1 .line {
+        position: relative;
+        right: 130px;
+        bottom: 100px;
+    }
+
+    .pg2 .left h1 {
+        font-size: 35px;
+    }
+
+    .pg2 .left h3 {
+        font-size: 25px;
+    }
+
+    .pg2 .right h3 {
+        font-size: 20px;
+    }
+
+    .pg2 .line {
+        position: relative;
+        right: 20px;
+    }
+
+    .pg3 .left h1 {
+        font-size: 35px;
+    }
+
+    .pg3 .left h3 {
+        font-size: 25px;
+    }
+
+    .pg4 .left h1 {
+        font-size: 35px;
+    }
+
+    .pg4 .left h3 {
+        font-size: 20px;
+    }
+
+    .pg4 .force {
+        width: 520px;
+    }
+
+    .pg5 .left h1 {
+        font-size: 35px;
+    }
+
+    .pg5 .left h3 {
+        font-size: 25px;
+    }
+
+    .pg5 .line {
+        position: relative;
+        left: -50px;
+    }
+
+    .pg5 .right {
+        position: relative;
+        left: 0;
+    }
+
+    .remind {
+        text-align: center;
+        position: relative;
+        left: 250px;
+        color: gray;
+        font-size: 18px;
+    }
+
+    main .course .general {
+        font-family: 'Ma Shan Zheng', cursive;
+        font-size: 80px;
+        height: 120px;
+        width: 400px;
+        position: relative;
+        top: 120px;
+        left: 80px;
+        margin: 0;
+        padding-top: 10px;
+        padding-left: 15px;
+        background-image: var(--gradient);
+        background-size: 300%;
+        background-position: left;
+        border-radius: 40px;
+    }
+
+    main .physics img {
+        display: inline-block;
+        margin: 30px;
+        transition: 0.5s;
+        border-radius: 10px;
+        width: 800px;
+        height: 1000px;
+        justify-content: center;
+    }
+
+    main .math img {
+        display: inline-block;
+        margin: 30px;
+        transition: 0.5s;
+        border-radius: 10px;
+        width: 800px;
+        height: 1000px;
+        justify-content: center;
+    }
+
+    main .chemistry img {
+        display: inline-block;
+        margin: 30px;
+        transition: 0.5s;
+        border-radius: 10px;
+        width: 800px;
+        height: 1000px;
+        justify-content: center;
+    }
+
+    main .course .special {
+        font-family: 'Ma Shan Zheng', cursive;
+        font-size: 80px;
+        height: 120px;
+        width: 480px;
+        position: relative;
+        top: 350px;
+        left: 80px;
+        margin: 0;
+        padding-top: 10px;
+        padding-left: 15px;
+        background-image: var(--gradient);
+        background-size: 300%;
+        background-position: left;
+        border-radius: 40px;
+    }
+
+    main .uecphysics img {
+        position: relative;
+        top: 130px;
+        display: inline-block;
+        margin: 30px;
+        transition: 0.5s;
+        border-radius: 10px;
+        width: 800px;
+        height: 1000px;
+        justify-content: center;
+    }
+
+    main .quote1 h2 {
+        font-size: 60px;
+        top: 1400px;
+    }
+
+    main .quote1 img {
+        width: 1400px;
+        position: relative;
+        top: 910px;
+    }
+
+    main .quote2 h2 {
+        font-size: 80px;
+        position: relative;
+        top: 1500px;
+        width: 1400px;
+    }
+
+    main .quote2 img {
+        height: 800px;
+        width: 1600px;
+        position: relative;
+        top: 1210px;
+    }
+
+    main .about1 {
+        font-size: 100px;
+    }
+
+    main .about2 {
+        position: relative;
+        top: 130px;
+        left: 120px;
+        width: 1200px;
+        height: 600px;
+        font-size: 40px;
+    }
+
+    main .frame1 {
+        position: relative;
+        width: 800px;
+        height: 800px;
+        top: 200px;
+        left: 130px;
+    }
+    
+    main .frame1 .resume1 {
+        position: relative;
+        left: 150px;
+        line-height: 25px;
+        width: 500px;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 28px;
+    }
+    
+    main .shadow-top1 {
+        left: -50px;
+        border-bottom: 860px solid #bbb;
+        border-left: 50px solid transparent;
+    }
+    
+    main .shadow-bottom1 {
+        left: -50px;
+        border-top: 20px solid #aaa;
+        border-left: 50px solid transparent;
+    }
+    
+    main .poster1 {
+        position: relative;
+        bottom: 480px;
+        right: 400px;
+        height: 400px;
+        width: 700px;
+    }
+
+    main .frame2 {
+        position: relative;
+        width: 800px;
+        height: 800px;
+        top: 280px;
+        left: 100px;
+        right: 600px;
+    }
+    
+    main .frame2 .resume2 {
+        position: relative;
+        top: 0px;
+        right: 280px;
+        width: 500px;
+        font-size: 28px;
+    }
+    
+    main .shadow-top2 {
+        right: -50px;
+        border-bottom: 860px solid #bbb;
+        border-right: 50px solid transparent;
+    }
+    
+    main .shadow-bottom2 {
+        right: -50px;
+        border-top: 20px solid #aaa;
+        border-right: 50px solid transparent;
+    }
+    
+    main .poster2 {
+        position: relative;
+        left: 200px;
+        bottom: 800px;
+        height: 90%;
+        width: 650px;
+        z-index: 10;
+        transition: .1s ease-in-out;
+    }
+
+    main .poster2:hover {
+        opacity: 0;
+    }
+
+    main .poster3 {
+        position: relative;
+        bottom: 1420px;
+        left: 200px;
+        width: 650px;
+        height: 95%;
+        z-index: 9;
+    }
+
+    #contact h4 {
+        position: relative;
+        padding-bottom: 100px;
+        left: 200px;
+        font-size: 20px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    #contact h2 {
+        font-size: 50px;
+        font-family: 'Berkshire Swash', cursive;
+    }
+
+    #contact .facebook {
+        width: 100px;
+        height: 100px;
+        position:relative;
+        top: 30px;
+    }
+
+    #contact .instagram {
+        position: relative;
+        top: 30px;
+        height: 90px;
+        width: 90px;
+        z-index: 10;
+    }
+
+    footer {
+        position: relative;
+        top: 1500px;
+    }
+}
+
+/***ipad device***/
+
+@media screen and (min-width: 750px) {
+    main .introduce1 .bulb {
+        width: 1700px;
+    }
+
+    main .introduce2 .book {
+        width: 1600px;
+    }
+
+    main .introduce3 .road {
+        width: 1600px;
+    }
+
+    main .introduce1 h2 {
+        font-size: 80px;
+    }    
+
+    header .logo {
+        width: 150px;
+        height: 100px;
+    }
+
+    nav li a {
+        font-size: 30px;
+    }
+
+    .remind {
+        text-align: center;
+        color: gray;
+        font-size: 18px;
+    }
+    
+    main .course .general {
+        font-family: 'Ma Shan Zheng', cursive;
+        font-size: 80px;
+        height: 120px;
+        width: 400px;
+        position: relative;
+        top: 120px;
+        left: 80px;
+        margin: 0;
+        padding-top: 10px;
+        padding-left: 15px;
+        background-image: var(--gradient);
+        background-size: 300%;
+        background-position: left;
+        border-radius: 40px;
+    }
+
+    main .physics img {
+        display: inline-block;
+        margin: 30px;
+        transition: 0.5s;
+        border-radius: 10px;
+        width: 800px;
+        height: 1000px;
+        justify-content: center;
+    }
+
+    main .math img {
+        display: inline-block;
+        margin: 30px;
+        transition: 0.5s;
+        border-radius: 10px;
+        width: 800px;
+        height: 1000px;
+        justify-content: center;
+    }
+
+    main .chemistry img {
+        display: inline-block;
+        margin: 30px;
+        transition: 0.5s;
+        border-radius: 10px;
+        width: 800px;
+        height: 1000px;
+        justify-content: center;
+    }
+
+    main .course .special {
+        font-family: 'Ma Shan Zheng', cursive;
+        font-size: 80px;
+        height: 120px;
+        width: 480px;
+        position: relative;
+        top: 350px;
+        left: 80px;
+        margin: 0;
+        padding-top: 10px;
+        padding-left: 15px;
+        background-image: var(--gradient);
+        background-size: 300%;
+        background-position: left;
+        border-radius: 40px;
+    }
+
+    main .uecphysics img {
+        position: relative;
+        top: 130px;
+        display: inline-block;
+        margin: 30px;
+        transition: 0.5s;
+        border-radius: 10px;
+        width: 800px;
+        height: 1000px;
+        justify-content: center;
+    }
+
+    main .quote1 h2 {
+        font-size: 60px;
+        top: 900px;
+        width: 1400px;
+    }
+
+    main .quote1 img {
+        width: 1600px;
+        position: relative;
+        top: 700px;
+    }
+
+    main .quote2 h2 {
+        font-size: 80px;
+        position: relative;
+        top: 900px;
+        width: 1400px;
+    }
+
+    main .quote2 img {
+        height: 800px;
+        width: 1600px;
+        position: relative;
+        top: 700px;
+    }
+
+    main .about1 {
+        font-size: 100px;
+    }
+
+    main .about2 {
+        position: relative;
+        top: 130px;
+        left: 120px;
+        width: 1200px;
+        height: 600px;
+        font-size: 40px;
+    }
+
+    main .frame1 {
+        position: relative;
+        width: 800px;
+        height: 700px;
+        top: 200px;
+        left: 130px;
+    }
+    
+    main .frame1 .resume1 {
+        position: relative;
+        left: 150px;
+        line-height: 25px;
+        width: 550px;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 30px;
+    }
+    
+    main .shadow-top1 {
+        left: -50px;
+        border-bottom: 760px solid #bbb;
+        border-left: 50px solid transparent;
+    }
+    
+    main .shadow-bottom1 {
+        left: -50px;
+        border-top: 20px solid #aaa;
+        border-left: 50px solid transparent;
+    }
+    
+    main .poster1 {
+        position: relative;
+        bottom: 480px;
+        right: 400px;
+        height: 400px;
+        width: 700px;
+    }
+
+    main .frame2 {
+        position: relative;
+        width: 800px;
+        height: 700px;
+        top: 280px;
+        left: 100px;
+        right: 600px;
+    }
+    
+    main .frame2 .resume2 {
+        position: relative;
+        top: 0px;
+        right: 280px;
+        width: 550px;
+        font-size: 30px;
+    }
+    
+    main .shadow-top2 {
+        right: -50px;
+        border-bottom: 760px solid #bbb;
+        border-right: 50px solid transparent;
+    }
+    
+    main .shadow-bottom2 {
+        right: -50px;
+        border-top: 20px solid #aaa;
+        border-right: 50px solid transparent;
+    }
+    
+    main .poster2 {
+        position: relative;
+        left: 200px;
+        bottom: 750px;
+        height: 95%;
+        width: 650px;
+        z-index: 10;
+        transition: .1s ease-in-out;
+    }
+
+    main .poster2:hover {
+        opacity: 0;
+    }
+
+    main .poster3 {
+        position: relative;
+        bottom: 1420px;
+        left: 200px;
+        width: 650px;
+        height: 95%;
+        z-index: 9;
+    }
+
+    #contact h4 {
+        position: relative;
+        left: 200px;
+        font-size: 20px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    #contact h2 {
+        font-size: 50px;
+        font-family: 'Berkshire Swash', cursive;
+    }
+
+    #contact .facebook {
+        width: 100px;
+        height: 100px;
+        position:relative;
+        top: 30px;
+    }
+
+    #contact .instagram {
+        position: relative;
+        top: 30px;
+        height: 90px;
+        width: 90px;
+        z-index: 10;
+    }
+
+    footer {
+        position: relative;
+        top: 700px;
+    }
+}
+
+/***laptop device***/
+
+@media screen and (min-width: 1000px) {
+    body {
+        height: 100%;
+    }
+
+    main .introduce1 .bulb {
+        width: 1600px;
+    }
+
+    main .introduce2 .book {
+        width: 1600px;
+    }
+
+    main .introduce1 h2 {
+        font-size: 50px;
+    }
+
+    header .logo {
+        width: 180px;
+        height: 100px;
+    }
+
+    nav li a {
+        font-size: 16px;
+    }
+
+    .banner {
+        width: 1200px;
+        height: 120px;
+        z-index: 1;
+        position: relative;
+        left: 50px;
+    }
+
+    .banner .calculator {
+        position: relative;
+        align-items: center;
+        top: -360px;
+        left: -140px;
+        z-index: 2;
+        opacity: 1;
+        width: 400px;
+        height: 400px;
+    }
+
+    .banner h1 {
+        position: relative;
+        top: 0;
+        font-size: 48px;
+        z-index: 3;
+    }
+
+    .slider {
+        width: 700px;
+        height: 600px;
+        border-radius: 10px;
+        overflow: hidden;
+        margin-left: 170px;
+        margin-top: 500px;
+        
+    }
+    
+    .slides {
+        width: 500%;
+        height: 600px;
+        display: flex;
+    }
+
+    .slide img {
+        width: 700px;
+        height: 600px;
+    }
+    
+    .manual-btn {
+        margin-right: 50px;
+    }
+
+    .navigation-auto div {
+        margin-top: 100px;
+        margin-right: 50px;
+    }
+
+    .recommend .topic {
+        width: 520px;
+    }
+    
+    .recommend h1 {
+        font-size: 40px;
+    }
+    
+    .recommend img {
+        position: relative;
+        top: 300px;
+        left: 700px;
+        height: 15%;
+        width: 15%;
+    }
+    
+    .recommend .summary h2 {
+        font-weight: bold;
+        font-size: 30px;
+    }
+
+    .recommend .summary h3 {
+        font-size: 20px;
+    }
+
+    .recommend .summary h4 {
+        font-size: 16px;
+    }
+    
+    .recommend .summary {
+        position: relative;
+        left: 200px;
+        width: 650px;
+    }
+    
+    .recommend .click {
+        position:relative;
+        left: 200px;
+        width: 310px;
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .pg1 .left h1 {
+        font-size: 30px;
+    }
+
+    .pg1 .left h3 {
+        font-size: 20px;
+    }
+
+    .pg1 .right h3 {
+        font-size: 20px;
+    }
+
+    .pg1 .right {
+        position: relative;
+        bottom: 0;
+    }
+
+    .pg1 .line {
+        position: relative;
+        bottom: 70px;
+        right: 80px;
+    }
+
+    .pg2 .left h1 {
+        font-size: 30px;
+    }
+
+    .pg2 .left h3 {
+        font-size: 20px;
+    }
+
+    .pg2 .right h3 {
+        font-size: 20px;
+    }
+
+    .pg2 .line {
+        position: relative;
+        right: 0;
+    }
+
+    .pg3 .left h1 {
+        font-size: 30px;
+    }
+
+    .pg3 .left h3 {
+        font-size: 20px;
+    }
+
+    .pg4 .left h1 {
+        font-size: 30px;
+    }
+
+    .pg4 .left h3 {
+        font-size: 18.5px;
+    }
+
+    .pg4 .force {
+        width: 500px;
+    }
+
+    .pg5 .left h1 {
+        font-size: 30px;
+    }
+
+    .pg5 .left h3 {
+        font-size: 20px;
+    }
+
+    .pg5 .line {
+        position: relative;
+        left: 0;
+    }
+
+    .pg5 .right {
+        position: relative;
+        left: 60px;
+    }
+
+    .remind {
+        text-align: center;
+        position: relative;
+        left: 0;
+        color: gray;
+        font-size: 18px;
+    }
+
+    main .course .general {
+        font-family: 'Ma Shan Zheng', cursive;
+        font-size: 35px;
+        height: 50px;
+        width: 150px;
+        position: relative;
+        top: 120px;
+        left: 80px;
+        margin: 0;
+        padding-top: 10px;
+        padding-left: 15px;
+        background-image: var(--gradient);
+        background-size: 300%;
+        background-position: left;
+        border-radius: 40px;
+    }
+
+    main .physics {
+        width: 1400px;
+    }
+
+    main .physics img {
+        display: inline-block;
+        margin: 50px;
+        transition: 0.5s;
+        border-radius: 10px;
+        width: 300px;
+        height: 400px;
+        justify-content: center;
+    }
+
+    main .math {
+        width: 1400px;
+    }
+
+    main .math img {
+        display: inline-block;
+        margin: 50px;
+        transition: 0.5s;
+        border-radius: 10px;
+        width: 300px;
+        height: 400px;
+        justify-content: center;
+    }
+
+    main .chemistry {
+        width: 1400px;
+    }
+
+    main .chemistry img {
+        display: inline-block;
+        margin: 50px;
+        transition: 0.5s;
+        border-radius: 10px;
+        width: 300px;
+        height: 400px;
+        justify-content: center;
+    }
+
+    main .course .special {
+        font-family: 'Ma Shan Zheng', cursive;
+        font-size: 35px;
+        height: 50px;
+        width: 180px;
+        position: relative;
+        top: 250px;
+        left: 80px;
+        margin: 0;
+        padding-top: 10px;
+        padding-left: 15px;
+        background-image: var(--gradient);
+        background-size: 300%;
+        background-position: left;
+        border-radius: 40px;
+    }
+
+    main .uecphysics {
+        width: 1400px;
+    }
+
+    main .uecphysics img {
+        position: relative;
+        top: 0;
+        display: inline-block;
+        margin: 50px;
+        transition: 0.5s;
+        border-radius: 10px;
+        width: 300px;
+        height: 400px;
+        justify-content: center;
+    }
+
+    main .quote1 h2 {
+        font-size: 70px;
+        top: 700px;
+    }
+
+    main .quote1 img {
+        width: 1800px;
+        position: relative;
+        top: 510px;
+    }
+
+    main .quote2 h2 {
+        font-size: 80px;
+        position: relative;
+        top: 700px;
+        width: 1400px;
+    }
+
+    main .quote2 img {
+        height: 700px;
+        width: 1600px;
+        position: relative;
+        top: 510px;
+    }
+
+    main .about1 {
+        font-size: 50px;
+    }
+
+    main .about2 {
+        position: relative;
+        top: 120px;
+        left: 100px;
+        width: 900px;
+        height: 400px;
+        font-size: 25px;
+    }
+
+    main .frame1 {
+        position: relative;
+        width: 500px;
+        height: 500px;
+        top: 200px;
+        left: 130px;
+    }
+    
+    main .frame1 .resume1 {
+        position: relative;
+        left: 150px;
+        line-height: 25px;
+        width: 360px;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 18px;
+    }
+    
+    main .shadow-top1 {
+        left: -50px;
+        border-bottom: 560px solid #bbb;
+        border-left: 50px solid transparent;
+    }
+    
+    main .shadow-bottom1 {
+        left: -50px;
+        border-top: 20px solid #aaa;
+        border-left: 50px solid transparent;
+    }
+    
+    main .poster1 {
+        position: relative;
+        bottom: 450px;
+        right: 400px;
+        height: 400px;
+        width: 700px;
+    }
+
+    main .frame2 {
+        position: relative;
+        width: 500px;
+        height: 500px;
+        top: 280px;
+        left: 330px;
+    }
+    
+    main .frame2 .resume2 {
+        position: relative;
+        top: 0px;
+        right: 280px;
+        width: 360px;
+        font-size: 18px;
+    }
+    
+    main .shadow-top2 {
+        right: -50px;
+        border-bottom: 560px solid #bbb;
+        border-right: 50px solid transparent;
+    }
+    
+    main .shadow-bottom2 {
+        right: -50px;
+        border-top: 20px solid #aaa;
+        border-right: 50px solid transparent;
+    }
+    
+    main .poster2 {
+        position: relative;
+        bottom: 550px;
+        left: 1px;
+        height: 100%;
+        width: 450px;
+        padding: 0;
+        margin: 0;
+        z-index: 10;
+        transition: .1s ease-in-out;
+    }
+    
+    main .poster2:hover {
+        opacity: 0;
+    }
+    
+    main .poster3 {
+        position: relative;
+        left: 0;
+        bottom: 1053px;
+        width: 450px;
+        height: 100%;
+        z-index: 9;
+        visibility: visible;
+    }
+
+    #contact h4 {
+        position: relative;
+        left: 0;
+        padding-bottom: 20px;
+        font-size: 16px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    #contact h2 {
+        font-size: 25px;
+        font-family: 'Berkshire Swash', cursive;
+    }
+
+    #contact .facebook {
+        width: 60px;
+        height: 60px;
+        position:relative;
+        top: 23px;
+    }
+
+    #contact .instagram {
+        position: relative;
+        top: 20px;
+        height: 50px;
+        width: 50px;
+        z-index: 10;
+    }
+
+    footer {
+        position: relative;
+        top: 500px;
+    }
+}
+
+

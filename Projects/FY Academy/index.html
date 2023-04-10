@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+        <title>FY ACADEMY</title>
+        <link rel="icon" type="image/png" href="4.png"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Knewave&family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Neuton&display=swap" rel="stylesheet">
+        <link href="style.css" rel="stylesheet" type="text/css" >
+    </head>
+    <body>
+        <header>
+            <div class="navbar">
+                <img src="4.png" class="logo">
+                <nav>
+                    <ul>
+                        <li><a class="active" href="./index.html">Home</a></li>
+                        <li><a href="./courses.html">Courses</a></li>
+                        <li><a href="./aboutus.html">About Us</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <script>
+            window.addEventListener('scroll', function() {
+                let header = document.querySelector('header');
+                let windowPosition = window.scrollY > 0;
+                header.classList.toggle('nav-scrolled', windowPosition);
+            })
+        </script>
+        <main>
+            <div class="introduce1">
+               <img class="bulb" src="15.jpg"/>
+               <h1>The important thing</h1>
+               <h1>is not to stop questioning</h1>
+               <h2>Why Us?</h2>
+            </div>
+            <div class="banner">
+                <h1>FY ACADEMY专门帮助学弟妹解决数理科难题！</h1>
+                <img class="calculator" src="calculator.png"/>
+            </div>
+            <div class="video">
+    
+            </div>
+            <div class="slider">
+                <div class="slides">
+                    <input type="radio" name="radio-btn" id="radio1">
+                    <input type="radio" name="radio-btn" id="radio2">
+                    <input type="radio" name="radio-btn" id="radio3">
+                    <input type="radio" name="radio-btn" id="radio4">
+                    <input type="radio" name="radio-btn" id="radio5">
+
+                    <div class="slide first">
+                        <img src="Slide1.JPG"/>
+                    </div>
+                    <div class="slide">
+                        <img src="Slide2.JPG"/>
+                    </div>
+                    <div class="slide">
+                        <img src="Slide3.JPG"/>
+                    </div>
+                    <div class="slide">
+                        <img src="Slide4.JPG"/>
+                    </div>
+                    <div class="slide">
+                        <img src="Slide5.JPG"/>
+                    </div>
+
+                    <div class="navigation-auto">
+                        <div class="auto-btn1"></div>
+                        <div class="auto-btn2"></div>
+                        <div class="auto-btn3"></div>
+                        <div class="auto-btn4"></div>
+                        <div class="auto-btn5"></div>
+                    </div>
+                </div>
+
+                <div class="navigation-manual">
+                    <label for="radio1" class="manual-btn"></label>
+                    <label for="radio2" class="manual-btn"></label>
+                    <label for="radio3" class="manual-btn"></label>
+                    <label for="radio4" class="manual-btn"></label>
+                    <label for="radio5" class="manual-btn"></label>
+                </div>
+            </div>
+            <div class="recommend">
+                <img src="7.png"/>
+                <h1 class="topic">Recommended for Senior 3 !</h1>
+                <div class="summary">
+                    <h2>物理统考加强班</h2>
+                    <h3>~ 带你重新认识牛顿力学，培养正确的观念</h3>
+                    <h3>~ 掌握惯性参考系与非惯性参考系的转换</h3>
+                    <h3>~ 掌握功能定理的应用</h3>
+                    <h3>~ 课程中涵盖理论知识与解题技巧</h3>
+                    <h4>***只要拥有正确的解题思维，统考力学一点都不难！！</h3>
+                    <h4>***力学占统考物理试卷二总分当中20分，是至关重要的部分！！！</h3>
+                </div>
+                <div class="click">
+                    <a href="courses.html"><h4>Click here for more courses details</h4></a>
+                </div>
+            </div>
+            <div class="slider1">
+                <div class="slides1">
+                    <input type="radio" name="radio-btn1" id="radio6">
+                    <input type="radio" name="radio-btn1" id="radio7">
+                    <input type="radio" name="radio-btn1" id="radio8">
+                    <input type="radio" name="radio-btn1" id="radio9">
+                    <input type="radio" name="radio-btn1" id="radio10">
+
+                    <div class="slide1 first1">
+                        <table>
+                            <tr class="pg1">
+                                <td class="left">
+                                    <h1>你知道吗？</h1>
+                                    <h3>统考物理从2020年起已更改考纲</h3>
+                                    <h3>这意味着你无法再存有侥幸心理</h3>
+                                    <h3>避开不熟悉的topic</h3>
+                                    <img class="einstein" src="71tt.gif">
+                                </td>
+                                <td>
+                                    <div class="line"></div>
+                                </td>
+                                <td class="right">
+                                    <h1>选答题（40%）</h1>
+                                    <h3>~ 力学（三选二）</h3>
+                                    <h3>~ 电磁学（三选二）</h3>
+                                    <h1>必答题（24%）</h1>
+                                    <h3>~ 热学</h3>
+                                    <h3>~ 几何光学</h3>
+                                    <h3>~ 物理光学</h3>
+                                    <h3>~ 近代物理</h3>
+                                    <h1>探究题（6%）</h1>
+                                    <img class="shocked" src="shocked.png"/>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="slide1">
+                        <table>
+                            <tr class="pg2">
+                                <td class="left">
+                                    <h1>你知道吗？</h1>
+                                    <h3>只要掌握解题思维，牛顿力学也能轻松得分</h3>
+                                    <h3>先决定参考系，区分是Statics or Dynamics</h3>
+                                    <h3>再进入右图相应的解题思维就可以了</h3>
+                                    <img class="newton" src="newton.png">
+                                </td>
+                                <td>
+                                    <div class="line"></div>
+                                </td>
+                                <td class="right">
+                                    <h1>Statics有两大解题思维</h1>
+                                    <h3>~ ΣF=0</h3>
+                                    <h3>~ ΣM=0</h3>
+                                    <h1>Dynamics有三大解题思维</h1>
+                                    <h3>~ ΣF=ma</h3>
+                                    <h3>~ Principle of Conservation of Linear Momentum</h3>
+                                    <h3>~ Work-Energy Theorem</h3>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="slide1">
+                        <table>
+                            <tr class="pg3">
+                                <td class="left">
+                                    <h1>你知道吗？</h1>
+                                    <h3>虽然光线和电场线都是直线+箭头</h3>
+                                    <h3>可是其中有非常重要的细节哦~</h3>
+                                    <h3>箭头的位置不同，表达的意思就不同咯！</h3>
+                                    <img class="electricfield" src="electricfield.png"/>
+                                    <img class="prism" src="prism.png"/>
+                                </td>
+                                <td>
+                                    <div class="line"></div>
+                                </td>
+                                <td class="right">
+                                    <div class="demo">
+                                        <h1 class="ray">光线</h1>
+                                        <img class="rayline" src="rayline.png"/>
+                                        <h1 class="electric">电场线</h1>
+                                        <img class="electricline" src="electricline.png"/>
+                                    </div>
+                                    <img class="wow" src="wow.gif"/>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="slide1">
+                        <table>
+                            <tr class="pg4">
+                                <td class="left">
+                                    <h1>你知道吗？</h1>
+                                    <h3>我们常听到的离心力并"不是"向心力的反作用力</h3>
+                                    <h3>它是在非惯性参考系下才会看到的一种假想力</h3>
+                                    <h3>作用力与反作用力除了大小一样、方向相反以外</h3>
+                                    <h3>还要满足"施力者"与"受力者"身份对调的条件</h3>
+                                    <h3>而向心力与离心力并不满足这个条件哦~</h3>
+                                    <img class="circular" src="circular.png"/>
+                                </td>
+                                <td>
+                                    <div class="line"></div>
+                                </td>
+                                <td class="right">
+                                    <img class="force" src="force.png"/>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="slide1">
+                        <table>
+                            <tr class="pg5">
+                                <td class="left">
+                                    <h1>你知道吗？</h1>
+                                    <h3>热学的"主角"其实是气体</h3>
+                                    <h3>例如飞机引擎使用的otto cycle</h3>
+                                    <h3>其工作原理就是靠气体对外界做功完成的</h3>
+                                    <img class="airplane" src="airplane.png"/>
+                                </td>
+                                <td>
+                                    <div class="line"></div>
+                                </td>
+                                <td class="right">
+                                    <img class="ottocycle" src="ottocycle.png"/>
+                                    <h3>ΔU=ΔQ+ΔW</h3>
+                                    <h3>1 => 2: 绝热收缩过程，气体对外界做负功先对燃油进行预热</h3>
+                                    <h3>2 => 3: 等容过程，急剧升高温度引爆燃油</h3>
+                                    <h3>3 => 4: 绝热膨胀过程，气体对外界做正功提供飞机驱动力</h3>
+                                    <h3>4 => 1: 等容过程，将燃油降温再排出</h3>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="navigation-auto1">
+                        <div class="auto-btn6"></div>
+                        <div class="auto-btn7"></div>
+                        <div class="auto-btn8"></div>
+                        <div class="auto-btn9"></div>
+                        <div class="auto-btn10"></div>
+                    </div>
+                </div>
+
+                <div class="navigation-manual1">
+                    <label for="radio6" class="manual-btn1"></label>
+                    <label for="radio7" class="manual-btn1"></label>
+                    <label for="radio8" class="manual-btn1"></label>
+                    <label for="radio9" class="manual-btn1"></label>
+                    <label for="radio10" class="manual-btn1"></label>
+                </div>
+            </div>
+            <h4 class="remind">*请点击按钮切换画面*</h4>
+        </main>
+        <footer id="contact">
+            <h2>Contact Us</h2>
+            <a href="https://www.facebook.com/FY-ACADEMY-101051265470025"><img class="facebook" src="1.png"/></a>
+            <a href="https://www.instagram.com/fyacademy.online/"><img class="instagram" src="2.png"/></a>
+            <h4>Copyright @Lor Wen Sin</h4>
+        </footer>
+        <script type="text/javascript">
+        var counter = 1;
+        setInterval(function() {
+            document.getElementById('radio' + counter).checked = true;
+            counter++;
+            if(counter > 5) {
+                counter = 1;
+            }
+        }, 5000);
+        </script>
+        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-607878ce598dde40"></script>
+    </body>
+</html>
